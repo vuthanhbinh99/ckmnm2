@@ -16,7 +16,7 @@ if (!isset($_SESSION['cart'])) {
 
 $action = $_GET['action'] ?? '';
 
-// API: Lấy số lượng sản phẩm trong giỏ
+// API: Lấy số lượng sản phẩm trong giỏ abc
 if ($action === 'get_cart_count') {
     $count = array_sum(array_column($_SESSION['cart'], 'quantity'));
     echo json_encode(['count' => $count]);
