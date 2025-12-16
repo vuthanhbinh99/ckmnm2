@@ -33,7 +33,7 @@ if ($action === 'add' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         // Lấy thông tin chi tiết sản phẩm từ database
-        $stmt = $pdo->prepare('SELECT id, name, price FROM products WHERE id = ?');
+        $stmt = $pdo->prepare('SELECT id, name, price FROM product WHERE id = ?');
         $stmt->execute([$product_id]);
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
 

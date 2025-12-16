@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/products",
-      "destination": "http://ckmnm2.atwebpages.com/backend/product_api.php"
+      "destination": "http://beckmnm.atwebpages.com/backend/product_api.php"
     },
     {
       "source": "/api/cart",
-      "destination": "http://ckmnm2.atwebpages.com/backend/cart_api.php"
+      "destination": "http://beckmnm.atwebpages.com/backend/cart_api.php"
     }
   ]
 }

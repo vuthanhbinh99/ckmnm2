@@ -21,7 +21,7 @@ function respond($status, $data = [], $message = null) {
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     try {
         // Truy vấn lấy các trường cần thiết (đảm bảo các tên cột trùng khớp với DB của bạn)
-        $sql = 'SELECT id, name, price, description FROM products ORDER BY id ASC';
+        $sql = 'SELECT id, name, price, description FROM product ORDER BY id ASC';
         
         $stmt = $pdo->query($sql);
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
