@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y \
     git \
     zip \
     unzip \
-    vim
+    vim \
+    ca-certificates \
+    && update-ca-certificates
 
 #Enable Apache mod_rewrite (nếu cần)
 RUN a2enmod rewrite
