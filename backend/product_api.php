@@ -1,8 +1,9 @@
 <?php
 // Thiết lập Header để cho phép truy cập từ Frontend (CORS) và định dạng JSON
-header('Access-Control-Allow-Origin: *'); 
-header('Content-Type: application/json');
-
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 // Kích hoạt Session (cần thiết nếu bạn muốn truy cập session giỏ hàng trong API này)
 // session_start(); 
 
