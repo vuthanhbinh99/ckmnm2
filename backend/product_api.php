@@ -37,8 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     } catch (PDOException $e) {
         // Ghi lại lỗi và trả về lỗi cho frontend
-        error_log('Database error: ' . $e->getMessage());
-        respond('error', [], 'Lỗi hệ thống: Không thể kết nối hoặc truy vấn cơ sở dữ liệu.');
+        echo json_encode([
+        "status" => "error",
+        "message" => "Lỗi thực tế: " . $e->getMessage(), // Xem nó báo gì ở đây
+        "data" => []
+    ]);
     }
 } else {
     // Trường hợp yêu cầu không phải là GET
