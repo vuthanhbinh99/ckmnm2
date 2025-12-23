@@ -5,7 +5,7 @@ $db   = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASSWORD');
 $options = [
-    PDO::MYSQL_ATTR_SSL_CA => true, 
+    PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // Tắt kiểm tra chứng chỉ nghiêm ngặt
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 ];
