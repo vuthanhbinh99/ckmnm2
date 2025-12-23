@@ -2,9 +2,10 @@
 /**
  * API Helper - Hỗ trợ các thao tác giỏ hàng
  */
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-header('Access-Control-Allow-Headers: Content-Type');
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 session_start();
 header('Content-Type: application/json');
